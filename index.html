@@ -138,7 +138,18 @@
                 <h2 class="final-heading">No todos están listos para esto.<br>Y eso está bien.</h2>
                 <p class="final-sub">Pero si entiendes lo que implica gobernarte…</p>
                 <div class="cta-wrapper">
-                    <a href="#" class="btn btn-solid large hover-invert">Solicitar ingreso</a>
+                    <form name="admision" method="POST" data-netlify="true" class="application-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Nombre completo" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="motivation" placeholder="¿Por qué buscas gobernarte a ti mismo? (Breve justificación)" rows="3" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-solid large hover-invert">Solicitar ingreso</button>
+                    </form>
                     <p class="microcopy meta-text">Acceso limitado. Evaluación previa. Acceso por invitación.</p>
                 </div>
             </div>
