@@ -108,21 +108,53 @@
         </div>
     </section>
 
-    <!-- 5. CICLO EJEMPLO -->
+    <!-- 5. CICLO EJEMPLO (CABBALISTIC MATRIX) -->
     <section id="ciclo" class="container-narrow">
-        <h2 class="centered heading-serif">Ciclo de ejemplo</h2>
-        <div class="ciclo-container">
-            <h4 class="text-sans centered">Tema: Ciudad y poder</h4>
-            <div class="ciclo-flow">
-                <div class="ciclo-step">Lectura</div>
-                <div class="ciclo-arrow">→</div>
-                <div class="ciclo-step">Recorrido</div>
-                <div class="ciclo-arrow">→</div>
-                <div class="ciclo-step">Síntesis</div>
-                <div class="ciclo-arrow">→</div>
-                <div class="ciclo-step">Encuentro</div>
-            </div>
+        <h2 class="centered heading-serif" style="margin-bottom: var(--spacing-lg);">El Camino del Círculo</h2>
+        <div class="ciclo-matrix">
+            <svg class="matrix-svg" viewBox="0 0 200 500" xmlns="http://www.w3.org/2000/svg">
+                <!-- Strategic Paths -->
+                <path class="matrix-path" d="M100 450 L100 50" stroke="currentColor" stroke-width="0.5" fill="none" />
+                <path class="matrix-path" d="M100 450 L40 300 L100 150 L160 300 L100 450" stroke="currentColor" stroke-width="0.5" stroke-dasharray="4 4" fill="none" />
+                <path class="matrix-path" d="M40 300 L160 300" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2 2" fill="none" />
+
+                <!-- Nodes -->
+                <!-- 1. Lectura (The Base) -->
+                <g class="matrix-node" transform="translate(100, 450)">
+                    <circle class="matrix-circle" r="35" />
+                    <text x="0" y="5" text-anchor="middle">Lectura</text>
+                </g>
+
+                <!-- 2. Recorrido (The Experience) -->
+                <g class="matrix-node" transform="translate(40, 300)">
+                    <circle class="matrix-circle" r="30" />
+                    <text x="0" y="5" text-anchor="middle">Recorrido</text>
+                </g>
+
+                <!-- 3. Síntesis (The Mind) -->
+                <g class="matrix-node" transform="translate(160, 300)">
+                    <circle class="matrix-circle" r="30" />
+                    <text x="0" y="5" text-anchor="middle">Síntesis</text>
+                </g>
+
+                <!-- 4. Encuentro (The Apex) -->
+                <g class="matrix-node" transform="translate(100, 150)">
+                    <circle class="matrix-circle node-highlight" r="40" />
+                    <text x="0" y="5" text-anchor="middle" style="font-weight: 600;">Encuentro</text>
+                </g>
+                
+                <!-- Final Goal Arrow to Ingreso -->
+                <path class="matrix-path" d="M100 110 L100 50" stroke="currentColor" stroke-width="2" marker-end="url(#arrowhead)" />
+                <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+                    </marker>
+                </defs>
+            </svg>
         </div>
+        <p class="centered" style="font-style: italic; color: var(--text-secondary); margin-top: var(--spacing-md);">
+            Un ascenso desde el texto hasta la comunión de ideas.
+        </p>
     </section>
 
     <!-- 6. PARTICIPANTES -->
